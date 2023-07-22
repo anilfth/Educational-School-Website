@@ -21,7 +21,7 @@
     --color-bg:#1f2641;
     --color-bg1:#2e3267;
     --color-bg2:#424890;
-    --container-width-lg: 76%;
+    --container-width-lg: 80%;
     --conatainer-width-md: 90%;
     --conatiner-width-sm: 94%;
     --transform: all 400ms ease;
@@ -337,8 +337,184 @@ transform: rotate(45deg);
     margin-top: 2rem;
   }
   .footer__copyright{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 4rem;
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-bg2);
-  }
+    /* background-color: rgb(113, 67, 155); */
+}
+
+/* ===================== MEDIA QUERIES (TABLETS) ================== */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: var(--conatainer-width-md);
+    }
+    h1{
+    font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+
+    /* ==================== NAVBAR ============================= */
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    nav button#close-menu-btn {
+        display: none;
+    }
+    .nav__menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .nav__menu li {
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top-right;
+        opacity: 0;
+    }
+    .nav__menu li:nth-child(2){
+        animation-delay:200ms;
+    }
+    .nav__menu li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav__menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    @keyframes animateNavItems{
+        0%{
+            transform: rotate(-90deg) rotateX(0) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+    .nav__menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .nav__menu li a:hover {
+     background: var(--color-bg2);
+     color: var(--color-white);
+    }
+
+    /* ======================== HEADER ======================== */
+    header{
+        height: 52vh;
+        margin-bottom: 4rem;
+    }
+    .header__container{
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+    /* ======================= CATERGORIES ========== */
+    .categories{
+        height:auto;
+    }
+    .categories__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .categories__left{
+        margin-left: 0;
+    }
+    /* ============ popular courses ============================= */
+    .courses{
+        margin-top: 0;
+    }
+    .courses__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ================== FAQS =========================== */
+    .faqs__container{
+        grid-template-columns: 1fr;
+    }
+    .faq{
+        padding: 1.5rem;
+    }
+    /* =============== FOOTER ======================================= */
+    .footer__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* ================================ MEDIA QUERIES(PHONES) =============== */
+@media screen and (max-width: 600px) {
+    .container{
+        width: var(--conatiner-width-sm);
+    }
+     /* ====================== NAVBAR =========================== */
+     .nav__menu{
+        right: 3%;
+     }
+     /* =============================== HEADER =========================== */
+     .header__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top:  0;
+     }
+     .header__left p {
+        margin-bottom: 1.3rem;
+     }
+
+     /* ================== categories ============================== */
+     .categories__right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+     }
+     .category{
+        padding: 1rem;
+        border-radius: 1rem;
+     }
+     .category__icon{
+        margin-top: 4px;
+        display: inline-block;
+     }
+     /* =============================== popular courses ================================== */
+   .courses__container{
+    grid-template-columns: 1fr;
+   }
+    /* ================== TESTIMONIALS ============================= */
+    .testimonial__body{
+        padding: 1.2rem;
+    }
+
+ /* ================================== FOOTER ========================== */
+ .footer__container{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+ }
+ .footer__1 p {
+    margin: 1rem auto;
+ }
+
+    }
