@@ -1,3 +1,4 @@
+/**
 .contact__container{
     background: var(--color-bg1);
     padding: 4rem;
@@ -10,6 +11,7 @@
 
 }
    /* ====== ASIDE =================================== */
+   /**
 .contact__aside {
     background: var(--color-primary);
     padding: 3rem;
@@ -49,6 +51,7 @@
 }
 
  /* ===========  FORM ============== */
+ /**
  .contact__form{
     display: flex;
     flex-direction:  column;
@@ -75,6 +78,7 @@
     cursor: pointer;
  }
  /* ============ MEDIA QUERIES (TABLETS) ================= */
+ /**
  @media screen and (max-width:  1024px){
    .contact{
 
@@ -99,6 +103,7 @@
 
 
 /* ============ MEDIA QUERIES (TABLETS) ================= */
+/**
 @media screen and (max-width:600px) {
     .contact__container {
         grid-template-columns: 1fr;
@@ -115,5 +120,144 @@
     }
     .form__name input[type="text"] {
         width:100%; 
+    }
+} 
+
+
+/* Global styles */
+body {
+    background-image: url("Images/bg-texture.png");
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contact section styles */
+.contact__container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+/* ASIDE styles */
+.contact__aside {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.aside__image {
+    width: 12rem;
+    margin-bottom: 1rem;
+}
+
+.contact__aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact__details li {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact__socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.contact__socials a {
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+.contact__socials a:hover {
+    background: transparent;
+}
+
+/* FORM styles */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form_name {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact__form input[type="text"],
+.contact__form input[type="email"],
+.contact__form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg2);
+    color: var(--color-white);
+    border: none;
+}
+
+.contact__form .btn {
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Media queries for tablets */
+@media screen and (max-width: 1024px) {
+    .contact__container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .contact__aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    .contact__form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+
+/* Media queries for mobile */
+@media screen and (max-width: 600px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .contact__form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form__name {
+        flex-direction: column;
+    }
+
+    .form__name input[type="text"] {
+        width: 100%;
     }
 }
