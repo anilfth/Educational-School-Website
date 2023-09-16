@@ -125,6 +125,12 @@
 
 
 /* Global styles */
+:root {
+    --color-bg1: #797676;
+    --color-bg2: #450d0d;
+    --color-primary: #0077b5;
+    --color-bg4: #e2dcdc;
+}
 body {
     background-image: url("Images/bg-texture.png");
     font-family: 'Montserrat', sans-serif;
@@ -275,4 +281,39 @@ body {
 /* Define button hover effect */
 .btn.btn-primary:hover {
     background-color: #00a4b3; /* Change the color on hover */
+}
+nav {
+    background-color: var(--color-bg4);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+nav .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h4 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+nav ul.nav__menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul.nav__menu li a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul.nav__menu li a:hover {
+    color: #555;
 }
