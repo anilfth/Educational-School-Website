@@ -261,3 +261,18 @@ body {
         width: 100%;
     }
 }
+
+/* Define the primary button style */
+.btn.btn-primary {
+    background-color: #bb1e74; /* Replace with your desired color code */
+    color: #ffffff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+}
+
+/* Define button hover effect */
+.btn.btn-primary:hover {
+    background-color: #00a4b3; /* Change the color on hover */
+}
